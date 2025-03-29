@@ -1,0 +1,29 @@
+version: '3.1'
+services:
+  mongodb:
+    image: mongo
+    env_file: ./.env
+    hostname: ${DB_NAME}
+    environment:
+      MONGO_INITDB_ROOT_USERNAME : ${DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD : ${DB_PASSWORD}
+      MONGO_INITDB_DATABASE: ${DB_NAME}
+    restart: on-failure
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    volumes:
+      - ./mongodb:/data/db
+
+  # app:
+  #   depends_on:
+  #     - mongodb
+  #   build: .
+  #   restart: always
+  #   env_file: ./.env
+  #   ports:
+  #     - ${NODE_LOCAL_PORT}:${NODE_DOCKER_PORT}
+  #   stdin_open: true
+  #   tty: true
+
+volumes:
+  db:

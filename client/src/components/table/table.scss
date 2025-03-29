@@ -1,0 +1,32 @@
+
+.row-img {
+    width: 30px!important;
+    height: 30px!important;
+}
+
+.row-text {
+    font-size: 14px;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.cell-container {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 2rem;
+}
+
+.table {
+    .table-filter-button {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    th {
+        font-size: .9rem;
+        border-right: 1px solid #a6a9b1; 
+    }
+    th:last-of-type {
+        border-right: none;
+    }
+}

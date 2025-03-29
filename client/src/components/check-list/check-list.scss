@@ -1,0 +1,23 @@
+
+.list-group {
+    height: 50vh;
+    overflow: auto;
+    .row {
+        flex-wrap: nowrap;
+        .input-group-text {
+            width: unset !important;
+            border: none !important;
+            background-color: unset;
+        }
+        
+        .checkbox-string {
+            width: unset;
+            padding: 0.375rem 0.75rem;
+            font-size: 13px;
+            color: #434651e6;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
